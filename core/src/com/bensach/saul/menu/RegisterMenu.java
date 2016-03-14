@@ -1,11 +1,19 @@
 package com.bensach.saul.menu;
 
 import com.badlogic.gdx.Screen;
+import com.bensach.saul.GameStart;
 
 /**
  * Created by saul- on 14/03/2016.
+ * Si el usuario todavia no tiene un usuario esta ventana es la de registro
  */
 public class RegisterMenu implements Screen {
+
+    private GameStart gameStart;
+
+    public RegisterMenu(GameStart gameStart) {
+        this.gameStart = gameStart;
+    }
 
     @Override
     public void show() {

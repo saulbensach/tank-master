@@ -1,12 +1,20 @@
 package com.bensach.saul.menu;
 
 import com.badlogic.gdx.Screen;
+import com.bensach.saul.GameStart;
 
 /**
  * Created by saul- on 14/03/2016.
+ * El menu principal
  */
 
 public class MainMenu implements Screen {
+
+    private GameStart gameStart;
+
+    public MainMenu(GameStart gameStart) {
+        this.gameStart = gameStart;
+    }
 
     @Override
     public void show() {

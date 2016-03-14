@@ -1,0 +1,85 @@
+{
+  "mockup": {
+    "controls": {
+      "control": [
+        {
+          "ID": "21",
+          "measuredH": "45",
+          "measuredW": "190",
+          "properties": {
+            "customID": "login",
+            "imageSrc": "interfazGrafica/boton1.png",
+            "src": {
+              "Anchor": -1,
+              "ID": "9675CD0B-3056-F178-F7A8-760E29BD40CB"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "x": "0",
+          "y": "135",
+          "zOrder": "0"
+        },
+        {
+          "ID": "22",
+          "measuredH": "45",
+          "measuredW": "190",
+          "properties": {
+            "customID": "register",
+            "imageSrc": "interfazGrafica/boton2.png",
+            "src": {
+              "Anchor": -1,
+              "ID": "75FA4E67-BEF5-ED79-E737-760E698A0216"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "x": "0",
+          "y": "183",
+          "zOrder": "1"
+        },
+        {
+          "ID": "23",
+          "measuredH": "45",
+          "measuredW": "190",
+          "properties": {
+            "customID": "inputText",
+            "imageSrc": "interfazGrafica/boton.png",
+            "src": {
+              "Anchor": -1,
+              "ID": "C1A6A0E6-69F3-D6D2-39EC-760E4591EE22"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "x": "0",
+          "y": "55",
+          "zOrder": "2"
+        },
+        {
+          "ID": "24",
+          "measuredH": "45",
+          "measuredW": "190",
+          "properties": {
+            "customID": "inputText",
+            "imageSrc": "interfazGrafica/boton.png",
+            "src": {
+              "Anchor": -1,
+              "ID": "C1A6A0E6-69F3-D6D2-39EC-760E4591EE22"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "x": "0",
+          "y": "0",
+          "zOrder": "3"
+        }
+      ]
+    },
+    "measuredH": "228",
+    "measuredW": "190",
+    "mockupH": "228",
+    "mockupW": "190",
+    "version": "1.0"
+  }
+}
