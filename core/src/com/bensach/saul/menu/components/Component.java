@@ -11,14 +11,16 @@ public class Component {
 
     private int width, height, x, y;
     protected Sprite sprite;
+    private ComponentType type;
 
-    protected Component(int width, int height, int x, int y, Sprite sprite) {
+    protected Component(int width, int height, int x, int y, Sprite sprite, ComponentType type) {
         this.width = width;
         this.y = y;
         this.x = x;
         this.height = height;
         this.sprite = sprite;
         this.sprite.setPosition(x,y);
+        this.type = type;
     }
 
     public int getWidth() {
@@ -38,9 +40,17 @@ public class Component {
         this.y = y;
     }
 
+    public ComponentType getType() {
+        return type;
+    }
+
     public void setX(int x) {
         sprite.setX(x);
         this.x = x;
+    }
+
+    public Sprite getSprite() {
+        return sprite;
     }
 
     public void setHeight(int height) {

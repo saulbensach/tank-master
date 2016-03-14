@@ -43,7 +43,7 @@
           "measuredH": "45",
           "measuredW": "190",
           "properties": {
-            "customID": "inputText",
+            "customID": "password",
             "imageSrc": "interfazGrafica/boton.png",
             "src": {
               "Anchor": -1,
@@ -61,7 +61,7 @@
           "measuredH": "45",
           "measuredW": "190",
           "properties": {
-            "customID": "inputText",
+            "customID": "username",
             "imageSrc": "interfazGrafica/boton.png",
             "src": {
               "Anchor": -1,

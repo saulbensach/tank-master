@@ -5,6 +5,6 @@ package com.bensach.saul.menu.components;
  */
 public enum ComponentType {
 
-    inputText, button, login, register
+    username, password, login, register
 
 }

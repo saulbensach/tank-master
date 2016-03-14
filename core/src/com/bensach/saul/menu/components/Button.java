@@ -13,7 +13,7 @@ public class Button extends Component {
     private String text;
 
     public Button(int width, int height, int x, int y, Sprite sprite, ComponentType type) {
-        super(width, height, x, y, sprite);
+        super(width, height, x, y, sprite, type);
         font = new BitmapFont();
         text = "";
         if(type.equals(ComponentType.login)){
