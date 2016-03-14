@@ -6,6 +6,6 @@ package com.bensach.saul.world;
 
 public enum CellType {
 
-    floor,wall
+    floor,wall,
 
 }
