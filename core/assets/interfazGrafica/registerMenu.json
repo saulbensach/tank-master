@@ -1,0 +1,159 @@
+{
+  "mockup": {
+    "controls": {
+      "control": [
+        {
+          "ID": "2",
+          "measuredH": "45",
+          "measuredW": "190",
+          "properties": {
+            "customID": "username",
+            "imageSrc": "interfazGrafica/boton.png",
+            "src": {
+              "Anchor": -1,
+              "ID": "C1A6A0E6-69F3-D6D2-39EC-760E4591EE22"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "x": "16",
+          "y": "16",
+          "zOrder": "1"
+        },
+        {
+          "ID": "3",
+          "measuredH": "45",
+          "measuredW": "190",
+          "properties": {
+            "customID": "password",
+            "imageSrc": "interfazGrafica/boton.png",
+            "src": {
+              "Anchor": -1,
+              "ID": "C1A6A0E6-69F3-D6D2-39EC-760E4591EE22"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "x": "16",
+          "y": "77",
+          "zOrder": "2"
+        },
+        {
+          "ID": "4",
+          "measuredH": "45",
+          "measuredW": "190",
+          "properties": {
+            "customID": "password",
+            "imageSrc": "interfazGrafica/boton.png",
+            "src": {
+              "Anchor": -1,
+              "ID": "C1A6A0E6-69F3-D6D2-39EC-760E4591EE22"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "x": "16",
+          "y": "138",
+          "zOrder": "3"
+        },
+        {
+          "ID": "7",
+          "measuredH": "45",
+          "measuredW": "49",
+          "properties": {
+            "customID": "cancel",
+            "imageSrc": "interfazGrafica/boton3.png",
+            "src": {
+              "Anchor": -1,
+              "ID": "B8B22B10-3780-99B0-EFE7-760E6330ACE8"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "x": "16",
+          "y": "192",
+          "zOrder": "4"
+        },
+        {
+          "ID": "10",
+          "measuredH": "18",
+          "measuredW": "18",
+          "properties": {
+            "src": {
+              "imageSrc": "interfazGrafica/cruz.png",
+              "Anchor": -1,
+              "ID": "6AEA143C-B082-B5DA-2A66-760E52C32AA1"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "x": "31",
+          "y": "205",
+          "zOrder": "5"
+        },
+        {
+          "ID": "11",
+          "h": "45",
+          "measuredH": "45",
+          "measuredW": "190",
+          "properties": {
+            "customID": "accept",
+            "imageSrc": "interfazGrafica/boton1.png",
+            "src": {
+              "Anchor": -1,
+              "ID": "9675CD0B-3056-F178-F7A8-760E29BD40CB"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "w": "126",
+          "x": "81",
+          "y": "192",
+          "zOrder": "6"
+        },
+        {
+          "ID": "12",
+          "h": "265",
+          "measuredH": "100",
+          "measuredW": "100",
+          "properties": {
+            "customID": "panel",
+            "imageSrc": "interfazGrafica/panel.png",
+            "src": {
+              "Anchor": -1,
+              "ID": "C90AF8D0-33ED-06B3-AC48-760E539558F8"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "w": "223",
+          "x": "0",
+          "y": "0",
+          "zOrder": "0"
+        },
+        {
+          "ID": "13",
+          "measuredH": "20",
+          "measuredW": "21",
+          "properties": {
+            "imageSrc": "interfazGrafica/check.png",
+            "src": {
+              "Anchor": -1,
+              "ID": "36BA0E57-8D85-92B8-BDE6-760E5050DAB6"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "x": "91",
+          "y": "204",
+          "zOrder": "7"
+        }
+      ]
+    },
+    "measuredH": "265",
+    "measuredW": "223",
+    "mockupH": "265",
+    "mockupW": "223",
+    "version": "1.0"
+  }
+}

@@ -3,6 +3,26 @@
     "controls": {
       "control": [
         {
+          "ID": "26",
+          "h": "260",
+          "measuredH": "100",
+          "measuredW": "100",
+          "properties": {
+            "customID": "panel",
+            "imageSrc": "interfazGrafica/panel.png",
+            "src": {
+              "Anchor": -1,
+              "ID": "C90AF8D0-33ED-06B3-AC48-760E539558F8"
+            },
+            "text": ""
+          },
+          "typeID": "Image",
+          "w": "222",
+          "x": "0",
+          "y": "0",
+          "zOrder": "0"
+        },
+        {
           "ID": "21",
           "measuredH": "45",
           "measuredW": "190",
@@ -16,9 +36,9 @@
             "text": ""
           },
           "typeID": "Image",
-          "x": "0",
-          "y": "135",
-          "zOrder": "0"
+          "x": "16",
+          "y": "151",
+          "zOrder": "1"
         },
         {
           "ID": "22",
@@ -34,9 +54,9 @@
             "text": ""
           },
           "typeID": "Image",
-          "x": "0",
-          "y": "183",
-          "zOrder": "1"
+          "x": "16",
+          "y": "199",
+          "zOrder": "2"
         },
         {
           "ID": "23",
@@ -52,9 +72,9 @@
             "text": ""
           },
           "typeID": "Image",
-          "x": "0",
-          "y": "55",
-          "zOrder": "2"
+          "x": "16",
+          "y": "71",
+          "zOrder": "3"
         },
         {
           "ID": "24",
@@ -70,16 +90,16 @@
             "text": ""
           },
           "typeID": "Image",
-          "x": "0",
-          "y": "0",
-          "zOrder": "3"
+          "x": "16",
+          "y": "16",
+          "zOrder": "4"
         }
       ]
     },
-    "measuredH": "228",
-    "measuredW": "190",
-    "mockupH": "228",
-    "mockupW": "190",
+    "measuredH": "260",
+    "measuredW": "222",
+    "mockupH": "260",
+    "mockupW": "222",
     "version": "1.0"
   }
 }

@@ -5,11 +5,11 @@ import com.bensach.saul.menu.*;
 
 public class GameStart extends Game {
 
-	private LoginMenu loginMenu;
-	private MainMenu mainMenu;
-	private OptionsMenu optionsMenu;
-	private RegisterMenu registerMenu;
-	private SplashScreen splashScreen;
+	public LoginMenu loginMenu;
+	public MainMenu mainMenu;
+	public OptionsMenu optionsMenu;
+	public RegisterMenu registerMenu;
+	public SplashScreen splashScreen;
 
 	@Override
 	public void create() {

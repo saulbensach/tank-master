@@ -21,6 +21,7 @@ public class Component {
         this.sprite = sprite;
         this.sprite.setPosition(x,y);
         this.type = type;
+        this.sprite.setSize(this.width, this.getHeight());
     }
 
     public int getWidth() {

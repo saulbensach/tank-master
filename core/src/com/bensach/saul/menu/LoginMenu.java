@@ -11,14 +11,16 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector3;
 import com.bensach.saul.GameStart;
-import com.bensach.saul.menu.components.Button;
-import com.bensach.saul.menu.components.Component;
-import com.bensach.saul.menu.components.ComponentType;
-import com.bensach.saul.menu.components.InputBox;
+import com.bensach.saul.menu.components.*;
+import com.mysql.jdbc.PreparedStatement;
 import org.json.*;
 
 
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Types;
 import java.util.ArrayList;
 
 /**
@@ -46,7 +48,7 @@ public class LoginMenu implements Screen , InputProcessor{
     }
 
     private void parseJson(){
-        JSONObject jsonObject = new JSONObject(Gdx.files.internal("interfazGrafica/gui.json").readString());
+        JSONObject jsonObject = new JSONObject(Gdx.files.internal("interfazGrafica/loginMenu.json").readString());
         JSONObject mockup = jsonObject.getJSONObject("mockup");
         JSONObject controls = mockup.getJSONObject("controls");
         JSONArray control = controls.getJSONArray("control");
@@ -103,6 +105,17 @@ public class LoginMenu implements Screen , InputProcessor{
                             )
                     );
                     break;
+                case panel:
+                    gui.add(
+                            new Panel(
+                                    component.getInt("w"),
+                                    component.getInt("h"),
+                                    component.getInt("x"),
+                                    component.getInt("y"),
+                                    new Sprite(new Texture(properties.getString("imageSrc"))),
+                                    type
+                            )
+                    );
             }
 
         }
@@ -115,8 +128,12 @@ public class LoginMenu implements Screen , InputProcessor{
             gui.get(i).setY(
                     Math.abs(gui.get(i).getY() - Gdx.graphics.getHeight() / 2) - Gdx.graphics.getHeight() / 2 + gui.get(i).getHeight()
             );
+            if(gui.get(i) instanceof Panel){
+                Panel p = (Panel) gui.get(i);
+                p.setY((p.getY() - Gdx.graphics.getHeight() / 2) - 85);
+                p.setX(p.getX() + 15);
+            }
         }
-
 
     }
 
@@ -135,10 +152,13 @@ public class LoginMenu implements Screen , InputProcessor{
         camera.unproject(mousePos);
         camera.update();
 
-        for(int i = 0; i < gui.size(); i++){
+        //Ponemos 1 para saltarnos el panel
+        for(int i = 1; i < gui.size(); i++){
             if(!pressed){
                 if(gui.get(i).getSprite().getBoundingRectangle().contains(mousePos.x, mousePos.y)){
-                    System.out.println(gui.get(i).getType().toString());
+                    System.out.println(gui.get(i).getType());
+                    if(gui.get(i).getType().equals(ComponentType.login))login();
+                    if(gui.get(i).getType().equals(ComponentType.register))register();
                     if(gui.get(i) instanceof InputBox){
                         ((InputBox) gui.get(i)).setFocused(true);
                         inputBoxFocus = (InputBox) gui.get(i);
@@ -155,6 +175,35 @@ public class LoginMenu implements Screen , InputProcessor{
             gui.get(i).draw(batch);
         }
         batch.end();
+    }
+
+    private void login(){
+        String user = "", password = "";
+        for(int i = 0; i < gui.size(); i++){
+            if(gui.get(i) instanceof InputBox){
+                if(((InputBox) gui.get(i)).getType().equals(ComponentType.username)){
+                    user = ((InputBox) gui.get(i)).getText();
+                }else{
+                    password = ((InputBox) gui.get(i)).getText();
+                }
+            }
+        }
+        try {
+
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/tankmaster", "root", "");
+            String query = "INSERT INTO users VALUES(?,?,?)";
+            PreparedStatement statement = (PreparedStatement) conn.prepareStatement(query);
+            statement.setNull(1, Types.INTEGER);
+            statement.setString(2, user);
+            statement.setString(3, password);
+            statement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void register(){
+        gameStart.setScreen(gameStart.registerMenu);
     }
 
     @Override
@@ -202,7 +251,10 @@ public class LoginMenu implements Screen , InputProcessor{
                         text += inputBoxFocus.getText().charAt(i);
                     }
                     inputBoxFocus.setText(text);
-                }else{
+                }else if(Gdx.input.isKeyPressed(Input.Keys.ENTER)){
+                    login();
+                }
+                else{
                     inputBoxFocus.setText(inputBoxFocus.getText() + character);
                 }
             }
